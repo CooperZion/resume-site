@@ -1,247 +1,293 @@
-/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
+html,body {
+  background: #fff;
   color: #222;
-  font-size: 1em;
-  line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+#container {
+  margin: auto;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+#header {
+  margin-top: 2em;
 }
 
-/*
- * A better looking default horizontal rule
- */
+#site-logo {
+  float: right;
+}
+
+#site-title,
+a:link,
+a:active,
+a:visited {
+}
+
+#site-title,
+a:link,
+a:active,
+a:visited {
+  color: #222;
+}
+
+a:hover {
+  color: #002266
+}
+
+#site-title {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+#site-title a:link,
+#site-title a:active,
+#site-title a:visited,
+#site-title a:hover {
+  text-decoration: none;
+}
+
+#footer {
+  color: #777;
+}
+
+#site-slogan {
+  margin-top: .75em;
+}
+
+nav {
+  clear: both;
+  margin-top: 3em;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul.first > li {
+  display: block;
+  margin: .5em 0;
+}
+
+nav a:link,
+nav a:active,
+nav a:visited,
+nav a:hover {
+  text-decoration: none;
+}
+
+nav a:link,
+nav a:active,
+nav a:visited {
+  color: #444;
+}
+
+nav a:hover {
+  color: #002266;
+}
+
+nav .current {
+  font-weight: bold;
+}
+
+#content,
+#footer,
+hr {
+  border-top: 1px dashed #aaa;
+}
+
+#content {
+  margin-top: 2em;
+}
+
+#article {
+  margin-top: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+}
+
+h3 {
+  padding-top: 1em;
+}
+
+#article p, #article ol li, #article ul li {
+  text-align: left;
+}
+
+#article blockquote {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.05em;
+  line-height: 1.5em;
+}
+
+#article dl dt {
+  font-weight: bold;
+}
+
+#article dl dt em {
+  font-weight: normal;
+}
+
+#article .timestamp,
+#article .tags,
+#article .tags a:link,
+#article .tags a:active,
+#article .tags a:visited,
+#article .tags a:hover {
+  color: #555;
+}
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  margin: 2.5em 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+span.upper {
+  text-transform: uppercase;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+img {
+  max-width: 100%;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+img.right {
+  float: right;
+  margin: 0 0 1em 1em;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+img.left {
+  float: left;
+  margin: 0 1em 1em 0;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
+#footer {
   clear: both;
+  padding-top: 2em;
+  margin-top: 4em;
+  font-size: 90%;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+ul.pagination {
+  padding: 0;
+  list-style-type: none;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+.pagination li {
+  display: inline-block;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.pagination .active a:link,
+.pagination .active a:active,
+.pagination .active a:visited,
+.pagination .active a:hover,
+.pagination .disabled a:link,
+.pagination .disabled a:active,
+.pagination .disabled a:visited,
+.pagination .disabled a:hover {
+  color: #555;
+  text-decoration: none;
+}
 
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  #container {
+    width: 950px;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
+  nav ul li a {
+    display: block;
+    font-size: 90%;
   }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
+  nav ul.first > li {
+    display: inline-block;
+    position: relative;
+    padding-right: 1.25em;
   }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
+  nav ul.second,
+  nav ul.third {
+    position: absolute;
+    background: #fff;
+    width: 212px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25);
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  nav ul.second {
+    z-index: 2;
   }
 
-  pre {
-    white-space: pre-wrap !important;
+  nav ul.third {
+    z-index: 3;
   }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
+  nav ul.second li {
+    position: relative;
   }
 
-  tr,
-  img {
-    page-break-inside: avoid;
+  nav ul.third {
+    left: 212px;
+    top: -1px;
   }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
+  nav ul.first li:hover ul.second,
+  nav ul.second li:hover ul.third {
+    display: block;
   }
 
-  h2,
-  h3 {
-    page-break-after: avoid;
+  nav ul.second li a,
+  nav ul.third li a {
+    padding: 0.75em 1em;
+  }
+
+  #article {
+    width: 700px;  /* 576px;  */
+    position: relative;
+  }
+
+  #summary {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 750px;   /* 608px; */
+    width: 200px;  /* 342px; */
   }
 }
 
+.tex sub, .latex sub, .latex sup {
+  text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+  vertical-align: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+  font-size: 1em;
+}
+
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+}
+
+.footnote {
+  font-size: 0.85em;
+}
