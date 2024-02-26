@@ -95,12 +95,21 @@ hr {
   border-top: 1px dashed #aaa;
 }
 
+.post {
+  border-top: 1px dashed #aaa;
+  border-bottom: 1px dashed #aaa;
+}
+
 #content {
   margin-top: 2em;
 }
 
 #article {
   margin-top: 2em;
+}
+
+#article.date {
+  color: #555;
 }
 
 h1,
