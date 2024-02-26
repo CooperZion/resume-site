@@ -56,16 +56,12 @@ a:hover {
 nav {
   clear: both;
   margin-top: 3em;
+  margin-bottom: 0em;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav ul.first > li {
-  display: block;
-  margin: .5em 0;
 }
 
 nav a:link,
@@ -85,12 +81,11 @@ nav a:hover {
   color: #002266;
 }
 
-nav .current {
+nav .active {
   font-weight: bold;
 }
 
 #content,
-#footer,
 hr {
   border-top: 1px dashed #aaa;
 }
@@ -101,15 +96,18 @@ hr {
 }
 
 #content {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 #article {
   margin-top: 2em;
+  margin-bottom: 4em;
+  border-bottom: 1px dashed #aaa;
 }
 
-#article.date {
-  color: #555;
+.date {
+  color: #002266;
+  font-style: italic;
 }
 
 h1,
@@ -120,10 +118,6 @@ h5,
 h6 {
   font-family: 'Lora', serif;
   font-weight: 400;
-}
-
-h3 {
-  padding-top: 1em;
 }
 
 #article p, #article ol li, #article ul li {
@@ -145,15 +139,6 @@ h3 {
   font-weight: normal;
 }
 
-#article .timestamp,
-#article .tags,
-#article .tags a:link,
-#article .tags a:active,
-#article .tags a:visited,
-#article .tags a:hover {
-  color: #555;
-}
-
 hr {
   border-bottom: 0;
   border-left: 0;
@@ -161,22 +146,8 @@ hr {
   margin: 2.5em 0;
 }
 
-span.upper {
-  text-transform: uppercase;
-}
-
 img {
   max-width: 100%;
-}
-
-img.right {
-  float: right;
-  margin: 0 0 1em 1em;
-}
-
-img.left {
-  float: left;
-  margin: 0 1em 1em 0;
 }
 
 #footer {
@@ -184,27 +155,6 @@ img.left {
   padding-top: 2em;
   margin-top: 4em;
   font-size: 90%;
-}
-
-ul.pagination {
-  padding: 0;
-  list-style-type: none;
-}
-
-.pagination li {
-  display: inline-block;
-}
-
-.pagination .active a:link,
-.pagination .active a:active,
-.pagination .active a:visited,
-.pagination .active a:hover,
-.pagination .disabled a:link,
-.pagination .disabled a:active,
-.pagination .disabled a:visited,
-.pagination .disabled a:hover {
-  color: #555;
-  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -220,81 +170,20 @@ ul.pagination {
     font-size: 90%;
   }
 
-  nav ul.first > li {
+  nav ul > li {
     display: inline-block;
     position: relative;
     padding-right: 1.25em;
   }
 
-  nav ul.second,
-  nav ul.third {
-    position: absolute;
-    background: #fff;
-    width: 212px;
-    border: 1px solid #ddd;
-    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25);
-  }
-
-  nav ul.second {
-    z-index: 2;
-  }
-
-  nav ul.third {
-    z-index: 3;
-  }
-
-  nav ul.second li {
+  li {
     position: relative;
-  }
-
-  nav ul.third {
-    left: 212px;
-    top: -1px;
-  }
-
-  nav ul.first li:hover ul.second,
-  nav ul.second li:hover ul.third {
-    display: block;
-  }
-
-  nav ul.second li a,
-  nav ul.third li a {
-    padding: 0.75em 1em;
   }
 
   #article {
     width: 700px;  /* 576px;  */
     position: relative;
   }
-
-  #summary {
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 750px;   /* 608px; */
-    width: 200px;  /* 342px; */
-  }
-}
-
-.tex sub, .latex sub, .latex sup {
-  text-transform: uppercase;
-}
-
-.tex sub, .latex sub {
-  vertical-align: -0.5ex;
-  margin-left: -0.1667em;
-  margin-right: -0.125em;
-}
-
-.tex, .latex, .tex sub, .latex sub {
-  font-size: 1em;
-}
-
-.latex sup {
-  font-size: 0.85em;
-  vertical-align: 0.15em;
-  margin-left: -0.36em;
-  margin-right: -0.15em;
 }
 
 .footnote {
