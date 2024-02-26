@@ -33,9 +33,9 @@ a:hover {
 }
 
 #site-title {
-  font-family: 'Lora', serif;
-  font-weight: 700;
-  font-size: xx-large;
+  font-family: "JetBrains Mono", serif;
+  font-weight: 800;
+  font-size: xxx-large;
 }
 
 #site-title a:link,
@@ -116,34 +116,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lora', serif;
+  font-family: "JetBrains Mono", serif;
   font-weight: 400;
 }
 
-#article p, #article ol li, #article ul li {
+#article p {
   text-align: left;
-}
-
-#article blockquote {
-  font-family: 'Lora', serif;
-  font-style: italic;
-  font-size: 1.05em;
-  line-height: 1.5em;
-}
-
-#article dl dt {
-  font-weight: bold;
-}
-
-#article dl dt em {
-  font-weight: normal;
-}
-
-hr {
-  border-bottom: 0;
-  border-left: 0;
-  border-right: 0;
-  margin: 2.5em 0;
 }
 
 img {
@@ -176,12 +154,8 @@ img {
     padding-right: 1.25em;
   }
 
-  li {
-    position: relative;
-  }
-
   #article {
-    width: 700px;  /* 576px;  */
+    width: 80%;  /* 576px;  */
     position: relative;
   }
 }
